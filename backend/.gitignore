@@ -1,0 +1,30 @@
+# Node.js / Express.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+
+# IDE/Editor specific
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# macOS specific files
+.DS_Store
+AppleDouble
+Icon
+._*
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+
+# Editor configuration
+*.editorconfig
