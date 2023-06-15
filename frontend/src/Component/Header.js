@@ -1,5 +1,5 @@
 import React, { useState }  from 'react'
-import logo from "../assest/logo.png"
+import logo from "../assest/logo.jpg"
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { BsCartFill } from "react-icons/bs";
 import { Link } from 'react-router-dom'
@@ -32,7 +32,7 @@ const userData=useSelector((state)=>state.user)
       <div className="flex items-center h-full justify-between">
         <Link to={""}>
           <div className="h-10">
-            <img src={logo} className="h-full" alt='' />
+            <img src={logo} className="h-12" alt='' />
           </div>
         </Link>
 
