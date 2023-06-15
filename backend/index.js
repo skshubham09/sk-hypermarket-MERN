@@ -100,7 +100,7 @@ const productModel = mongoose.model("product", schemaProduct)
 
 //save product in data 
 //api
-app.post("uploadProduct", async (req, res) => {
+app.post("/uploadProduct", async (req, res) => {
   try {
     const prodData = new productModel(req.body);
     await prodData.save();
@@ -124,7 +124,7 @@ app.get("/product", async (req, res) => {
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
-app.post("create-checkout-session", async (req, res) => {
+app.post("/create-checkout-session", async (req, res) => {
 
   try {
     const params = {
