@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 })
 
 //signup
-app.post("signup", async (req, res) => {
+app.post("/signup", async (req, res) => {
   //console.log(req.body)
   const { email } = req.body;
 
@@ -59,7 +59,7 @@ app.post("signup", async (req, res) => {
 });
 
 //login
-app.post('login', async (req, res) => {
+app.post('/login', async (req, res) => {
   //console.log(req.body)
   const { email } = req.body;
   try {
@@ -114,7 +114,7 @@ app.post("uploadProduct", async (req, res) => {
 
 //product
 
-app.get("product", async (req, res) => {
+app.get("/product", async (req, res) => {
   const data = await productModel.find({})
   res.send(JSON.stringify(data));
 })

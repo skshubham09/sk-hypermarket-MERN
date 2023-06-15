@@ -48,7 +48,7 @@ const dispatch=useDispatch()
             body : JSON.stringify(data)
           })
           const dataRes = await fetchData.json()
-          console.log(dataRes)
+          //console.log(dataRes)
           toast(dataRes.message) 
           
           if(dataRes.alert){
