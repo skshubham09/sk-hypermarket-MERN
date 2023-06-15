@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 })
 
 //signup
-app.post("signup", async (req, res) => {
+app.post("/signup", async (req, res) => {
   //console.log(req.body)
   const { email } = req.body;
 
@@ -59,7 +59,7 @@ app.post("signup", async (req, res) => {
 });
 
 //login
-app.post('login', async (req, res) => {
+app.post('/login', async (req, res) => {
   //console.log(req.body)
   const { email } = req.body;
   try {
@@ -100,7 +100,7 @@ const productModel = mongoose.model("product", schemaProduct)
 
 //save product in data 
 //api
-app.post("uploadProduct", async (req, res) => {
+app.post("/uploadProduct", async (req, res) => {
   try {
     const prodData = new productModel(req.body);
     await prodData.save();
@@ -114,7 +114,7 @@ app.post("uploadProduct", async (req, res) => {
 
 //product
 
-app.get("product", async (req, res) => {
+app.get("/product", async (req, res) => {
   const data = await productModel.find({})
   res.send(JSON.stringify(data));
 })
@@ -124,7 +124,7 @@ app.get("product", async (req, res) => {
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
-app.post("create-checkout-session", async (req, res) => {
+app.post("/create-checkout-session", async (req, res) => {
 
   try {
     const params = {
