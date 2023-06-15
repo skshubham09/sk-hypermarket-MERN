@@ -17,7 +17,7 @@ const Signup = () => {
         confirmPassword: "",
         image: ""
     });
-    console.log(data)
+    //console.log(data)
     const handleShowPassword = () => {
         setShowPassword(preve => !preve);
     }
@@ -58,7 +58,7 @@ console.log(process.env.REACT_APP_SERVER_DOMIN)
                   })
         
                   const dataRes = await fetchData.json()
-console.log(dataRes)
+//console.log(dataRes)
                 toast(dataRes.message)
                 if(dataRes.alert){
                     navigate("/login")
